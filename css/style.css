@@ -5,6 +5,7 @@
   position: fixed;
   width: 100%;
   background-color: #fff;
+  z-index: 999;
 }
 
 .inner {
@@ -40,15 +41,16 @@
   color: #333;
 }
 
+.body {
+  padding-top: 70px;
+}
+
 .title {
-  width: 100%;
   background-color: #f2f2f2;
   padding: 250px 0;
 }
 
 .title-inner {
-  display: flex;
-  flex-direction: column;
   text-align: center;
 }
 
@@ -61,28 +63,27 @@
 
 .heading-small {
   font-family: 'Raleway';
-  padding-top: 20px;
+  margin-top: 20px;
   font-size: 30px;
   color: #c0c0c0;
 }
 
 .top-section {
-  width: 100%;
   background-color: #74cfae;
 }
 
 .top-section-inner {
   display: flex;
   justify-content: space-around;
-}
-
-.section__logo {
   padding-top: 50px;
 }
 
+.section__logo {
+
+}
+
 .section__item {
-  margin: auto;
-  flex-direction: column;
+  vertical-align: middle;
 }
 
 .section__title {
@@ -93,22 +94,22 @@
 }
 
 .section__text {
-  padding-top: 35px;
+  width: 650px;
+  margin-top: 35px;
   font-size: 20px;
   text-align: center;
   color: #fff;
+  line-height: 30px;
+  word-break: keep-all;
 }
 
 .article {
-  width: 100%;
   background-color: #f2f2f2;
 }
 
 .article-inner {
-  display: flex;
   padding-top: 60px;
   padding-bottom: 70px;
-  flex-direction: column;
   text-align: center;
 }
 
@@ -118,13 +119,14 @@
 }
 
 .article__body {
-  display: inline-flex;
-  flex-wrap: wrap;
-  justify-content: center;
   margin-top: 40px;
+  font-size: 0;
 }
 
 .article__item {
+  display: inline-block;
+  margin-top: 80px;
+  margin-left: 100px;
   opacity: .7;
   transition: .3s;
 }
@@ -133,12 +135,12 @@
   opacity: 1;
 }
 
-.article__item:nth-child(3n+2) {
-  margin: 0 100px;
+.article__item:nth-child(3n+1) {
+  margin-left: 0;
 }
 
-.article__item:nth-child(n+4) {
-  margin-top: 80px;
+.article__item:nth-child(-n+3) {
+  margin-top: 0;
 }
 
 .article__foot {
@@ -168,8 +170,6 @@
 }
 
 .bottom-section-inner {
-  display: flex;
-  flex-direction: column;
   padding-top: 70px;
   padding-bottom: 100px;
   color: #fff;
@@ -188,17 +188,20 @@
 }
 
 .bottom-section__item {
-  flex-direction: column;
-  padding: 0 90px;
+  margin-left: 180px;
+}
+
+.bottom-section__item:first-child {
+  margin-left: 0;
 }
 
 .item__text {
   font-size: 14px;
   text-align: center;
+  margin-top: 10px;
 }
 
 .nav {
-  width: 100%;
   background-color: #f2f2f2;
 }
 
@@ -228,18 +231,15 @@
 }
 
 .footer {
-  width: 100%;
   background-color: #74cfae;
 }
 
 .footer-inner {
-  display: flex;
-  justify-content: space-between;
-  flex-direction: row-reverse;
+  padding-top: 20px;
+  padding-bottom: 25px;
+  text-align: right;
 }
 
 .company {
-  padding-top: 20px;
-  padding-bottom: 25px;
   color: #fff;
 }
